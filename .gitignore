@@ -4,6 +4,7 @@
 .ipynb_checkpoints
 __pycache__
 *.db
+example.py
 
 /Code with Mosh/text*.txt
 *.zip
