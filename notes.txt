@@ -1,22 +1,161 @@
+GETTING STARTED
+- initialize git repo
+> git init
+
+- move files to staging area
+> git add *.py
+
+- commit to git
+> git commit -m "MSG"
+
+- direct commit to git, without moving to staging area
+> git commit -am "MSG"
+
+- removing files 
+> git rm <file_name/pattern>
+
+- renaming files 
+> git mv <old file_name> <new file_name>
+
+- ignoring already tracked file
+    - add already tracked file to .gitignore
+    - show files in staging area
+    > git ls-files
+    - remove file from only from staging area
+    > git rm --cached <file_name>
+    - add files to staging area
+    - commit
+
+- review code in staging area
+> git diff --staged
+
+- check log
+> git log --oneline --all --reverse --graph
+
+- show changes in commits
+> git show <commit_id>
+
+- show all files changed in commit
+> git ls-tree <commit_id>
+
+- unstage changes
+> git reset <file_name>
+> git restore --staged <file_name>
+
+- discard all changes in current working directory
+> git clean
+> git clean -fd
+
+- restore a file that was accidently deleted from previous commit
+> git restore --source=HEAD~1 <file_path>
+
+
+
+
+
+BROWSING HISTORY
+
+- view history 
+> git log
+
+- view all files changed in each commit
+> git log --oneline --stat
+
+- view file content that's been changed
+> git log --oneline --patch
+
+- filtering history
+    - last n commits
+    > git log --oneline -n
+    - by author
+    > git log --oneline --author="<author name>"
+    - by date
+    > git log --oneline --before="2020-08-17" --after="2020-08-17"
+    > git log --oneline --before="yesterday" --after="one week ago"
+    - by commit msg
+    > git log --oneline --grep="GUI"
+    - by content (added specific word)
+    > git log --oneline -S"git_opeation"
+    > git log --oneline -S"git_opeation" --patch
+    - by commit range
+    > git log --oneline <commit_id>..<commit_id>
+    - which modified a particular file
+    > git log --oneline <file_name>
+    > git log --oneline -- <file_name>
+
+- Formatting log output
+> git log --pretty=format:"%Cgreen%an%Creset comitted %h on %cd"
+
+- adding alias
+> git config --global alias.<alias> "<cmd>"
+> git config --global alias.lg "log --pretty=format:'%Cgreen%an%Creset comitted %h on %cd'"
+
+- edit global config file
+> git config --global -e
+
+- check file names that were modified in a commit 
+> git show <commit_id> --name-only
+
+- check file names that were modified in a commit with status
+> git show <commit_id> --name-status
+
+- show changes across commits
+> git diff HEAD~2 HEAD --name-only <optional file_name>
+
+- checking out a commit
+> git checkout <commit_id>
+
+- finding bugs using bisect
+> git bisect start
+> mark current commit as bad > git bisect bad
+> provide last known good commit > git bisect good <commit_id>
+> check current HEAD state if good/bad and mark it > git bisect good/bad
+> once done > git bisect reset
+
+- find contributers
+> git shortlog
+
+- restoring deleted file from history
+> git checkout <commit_id> <file_name>
+
+- blame for code
+> git blame <file_name>
+> git blame -L 1,3 <file_name>
+
+- tagging
+> git tag v1.0 <commit_id>
+
+- view tags with messages
+> git tag -n
+
+- annotated tags
+> git tag -a v1.1 -m "msg"
+
+- delete tag
+> git tag -d v1.1
+
+
+
 
 
 BRANCHING
-- View branches
+
+- view branches
 > git branch
 
-- Create a branch
+- create a branch
 > git branch <branch_name>
 
 - switch to different branch
 > git switch <branch_name>
 
-- Create and switch to new branch
+- create and switch to new branch
 > git switch -C <branch_name>
 
 - rename existing branch
 > git branch -m <old branch_name> <new branch_name>
 
-- Delete a branch (force delete using -D)
+- delete a branch (force delete using -D)
 > git branch -d <branch_name>
 
 - Comparing branch 
@@ -93,6 +232,7 @@ OR
 
 
 COLLABORATING
+
 - Cloning a repo
 > git clone <repo url> <optional directory name>
 
