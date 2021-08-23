@@ -1,0 +1,93 @@
+
+
+BRANCHING
+- View branches
+> git branch
+
+- Create a branch
+> git branch <branch_name>
+
+- switch to different branch
+> git switch <branch_name>
+
+- Create and switch to new branch
+> git switch -C <branch_name>
+
+- rename existing branch
+> git branch -m <old branch_name> <new branch_name>
+
+- Delete a branch (force delete using -D)
+> git branch -d <branch_name>
+
+- Comparing branch 
+    - Commits that are in branch_name2 but not in branch_name1
+    > git log <branch_name1>..<branch_name2>
+    - Comparing changes
+    > git diff <branch_name1>..<branch_name2>
+    - View only files changed
+    > git diff --name-only <branch_name1>..<branch_name2>
+    > git diff --name-status <branch_name1>..<branch_name2>
+
+- Stashing changes
+(By default, stash doesn't save untracked files, to include them in stash, use --all)
+> git stash push -m "<msg>"
+> git stash push --all -m "<msg>"
+
+- List stash
+> git stash list
+
+- Show changes from stash
+> git stash show stash@{#}
+> git stash show #
+
+- Apply stash changes
+> git stash apply #
+
+- Delete stash
+    - drop stash by number
+    > git stash drop #
+    - drop all stash
+    > git stash clear
+
+- Merging branch
+> git merge <branch_name>
+
+- Merging branch without fast-forward even if its available
+> git merge --no-ff <branch_name>
+
+- Viewing merged and unmerged branches
+> git branch --merged
+> git branch --no-merged
+
+- Cancel merge 
+> git merge --abort
+
+- Undo faulty merge
+    - removing last commit (local only)
+    > git reset --hard HEAD~1
+    - new commit reverting changes
+    > git revert HEAD
+    > git revert -m <parent> HEAD 
+
+- Squashing commit
+> git merge --squash <branch_name>
+The above statement will add files to STAGING AREA
+
+- Rebasing (local only)
+>> go to feature branch and
+> git rebase <master>
+>> in case of conflict, resolve it and 
+> git rebase --continue
+>> other options --skip, --abort
+
+- Cherry Picking
+> git cherry-pick <commit_id>
+
+- Picking file from one branch to another
+> git restore --source=<from branch> <filename>
+OR 
+> git restore --source=<from branch> -- <filename>
+
+
+
+
