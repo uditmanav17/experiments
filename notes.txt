@@ -91,3 +91,95 @@ OR
 
 
 
+
+COLLABORATING
+- Cloning a repo
+> git clone <repo url> <optional directory name>
+
+- check remote repos
+> git remote
+
+- check remote repo details
+> git remote -v
+
+- get new commits from remote repo
+> git fetch
+
+- check divergence bw local and remote branch
+> git branch -vv
+
+- pull changes from remote repo (fetch + merge)
+> git pull
+
+- Rebasing while pulling
+> git pull --rebase
+
+- push changes to remote repo
+    - first time
+    > git push origin master
+    - subsequent times
+    > git push
+    - force push (DONT USE)
+    > git push -f 
+
+- push branch to remote
+    - first time 
+    > git push -u origin <branch_name>
+    - subsequent push
+    > git push
+
+- save credentials to cache 
+> git config --global credentials.helper cache
+
+- push tags to Commits
+> git push origin <tag_name>
+
+- delete tags
+    - from remote repo
+    > git push origin --delete <tag_name>
+    - from local repo
+    > git tag -d <tag_name>
+
+- check remote branches
+> git branch -r 
+
+- remove remote branches from local
+> git remote prune origin
+
+
+
+
+
+REWRITING HISTORY (only use for local repos)
+
+- removing commit
+    - only removes the commit, doesn't change working directory or staging area
+    > git reset --soft HEAD~1
+
+    - removes the commit and unstage files from staging area
+    > git reset --mixed HEAD~1
+    
+    - undo changes in working directory and staging area
+    > git reset --hard HEAD~1
+
+- check HEAD history in case of wrong reset
+> git reflog
+
+- undo reset by moving HEAD
+> git reset --hard <commit id>
+
+- modify/amend last commit
+> stage changes
+> git commit --amend
+
+- modify/amend earlier commit (interactive rebasing)
+> git rebase -i <old commit_id>
+can be used to - 
+    - amend earlier commit (include/exclude files)
+    - drop intermediate commits
+    - rewording commit messages
+    - reordering commits
+    - squash multiple previous commit
+    - split a commit
+
+
