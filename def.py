@@ -1,5 +1,7 @@
 import re
 
+# this will be smudged when pushing to repo by smudge filter
+# and cleaned when pulling from repo by clean filter
 API_KEY = "{SECRET_TOKEN}"
 
 
