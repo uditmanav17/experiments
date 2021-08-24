@@ -1,0 +1,11 @@
+#!/bin/sh
+
+
+# exit with non-zero if any of scripts fails
+set -e
+
+# apply formatter
+black .
+
+# run tests
+pytest -q

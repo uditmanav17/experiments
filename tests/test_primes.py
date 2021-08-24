@@ -1,4 +1,5 @@
 import pytest
+
 from arg_test import get_primes
 
 
