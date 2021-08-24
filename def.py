@@ -1,5 +1,3 @@
-#!/c/Users/uditm/AppData/Local/Programs/Python/Python38/python.exe
-
 import re
 
 API_KEY = "{SECRET_TOKEN}"

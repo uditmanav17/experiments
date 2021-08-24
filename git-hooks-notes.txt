@@ -1,0 +1,11 @@
+
+Client side GitHooks (pre-commit)
+- go to .git/hooks
+- pick pre-commit template
+- edit and save it there only
+- make note first line of pre-commit should be - #!/bin/sh
+
+
+
+
+
