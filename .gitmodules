@@ -8,6 +8,20 @@
 # to get detailed submodule summary set
 # git config --global status.submoduleSummary true
 
+# also get diff of submodules
+# git config --global diff.submodule log
+
+# when pulling down repo with submodule, after cloning
+# git submodule init
+# git submodule update
+
+# we can also change submodule branch and then commit our parent repo
+
+# REMOVING submodule
+# git submodule deinit submodule_dir/example_submodule
+# git rm submodule_dir/example_submodule
+
+
 
 
 
