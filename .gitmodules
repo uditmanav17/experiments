@@ -21,13 +21,3 @@
 # REMOVING submodule
 # git submodule deinit submodule_dir/example_submodule
 # git rm submodule_dir/example_submodule
-
-
-
-
-
-
-
-
-
-

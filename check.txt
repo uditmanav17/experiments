@@ -49,7 +49,7 @@ Check out all related information [here](GSSoC.md)
   - Verify the installation, running the command  `mysql -uroot -p -hlocalhost` should open the mySQL monitor. (Enter the root password when prompted)
 - StanfordCoreNLP
   - StanfordCoreNLP has a dependency on Java 8. `java -version` should complete successfully with version 1.8 or higher.
-  - Windows- Download as a .zip file from [here](https://stanfordnlp.github.io/CoreNLP/download.html).  
+  - Windows- Download as a .zip file from [here](https://stanfordnlp.github.io/CoreNLP/download.html).
   - Linux and MacOS- Follow the instructions to download the file from [here](https://stanfordnlp.github.io/CoreNLP/download.html).
 
 -----

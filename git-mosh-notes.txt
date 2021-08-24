@@ -11,10 +11,10 @@ GETTING STARTED
 - direct commit to git, without moving to staging area
 > git commit -am "MSG"
 
-- removing files 
+- removing files
 > git rm <file_name/pattern>
 
-- renaming files 
+- renaming files
 > git mv <old file_name> <new file_name>
 
 - ignoring already tracked file
@@ -55,7 +55,7 @@ GETTING STARTED
 
 BROWSING HISTORY
 
-- view history 
+- view history
 > git log
 
 - view all files changed in each commit
@@ -93,7 +93,7 @@ BROWSING HISTORY
 - edit global config file
 > git config --global -e
 
-- check file names that were modified in a commit 
+- check file names that were modified in a commit
 > git show <commit_id> --name-only
 
 - check file names that were modified in a commit with status
@@ -161,7 +161,7 @@ BRANCHING
 - delete a branch from remote after removing it in local
 > git push origin :<branch_name>
 
-- Comparing branch 
+- Comparing branch
     - Commits that are in branch_name2 but not in branch_name1
     > git log <branch_name1>..<branch_name2>
     - Comparing changes
@@ -201,7 +201,7 @@ BRANCHING
 > git branch --merged
 > git branch --no-merged
 
-- Cancel merge 
+- Cancel merge
 > git merge --abort
 
 - Undo faulty merge
@@ -209,7 +209,7 @@ BRANCHING
     > git reset --hard HEAD~1
     - new commit reverting changes
     > git revert HEAD
-    > git revert -m <parent> HEAD 
+    > git revert -m <parent> HEAD
 
 - Squashing commit
 > git merge --squash <branch_name>
@@ -218,7 +218,7 @@ The above statement will add files to STAGING AREA
 - Rebasing (local only)
 >> go to feature branch and
 > git rebase <master>
->> in case of conflict, resolve it and 
+>> in case of conflict, resolve it and
 > git rebase --continue
 >> other options --skip, --abort
 
@@ -227,7 +227,7 @@ The above statement will add files to STAGING AREA
 
 - Picking file from one branch to another
 > git restore --source=<from branch> <filename>
-OR 
+OR
 > git restore --source=<from branch> -- <filename>
 
 
@@ -263,15 +263,15 @@ COLLABORATING
     - subsequent times
     > git push
     - force push (DONT USE)
-    > git push -f 
+    > git push -f
 
 - push branch to remote
-    - first time 
+    - first time
     > git push -u origin <branch_name>
     - subsequent push
     > git push
 
-- save credentials to cache 
+- save credentials to cache
 > git config --global credentials.helper cache
 
 - push tags to Commits
@@ -284,7 +284,7 @@ COLLABORATING
     > git tag -d <tag_name>
 
 - check remote branches
-> git branch -r 
+> git branch -r
 
 - remove remote branches from local
 > git remote prune origin
@@ -301,7 +301,7 @@ REWRITING HISTORY (only use for local repos)
 
     - removes the commit and unstage files from staging area
     > git reset --mixed HEAD~1
-    
+
     - undo changes in working directory and staging area
     > git reset --hard HEAD~1
 
@@ -317,12 +317,10 @@ REWRITING HISTORY (only use for local repos)
 
 - modify/amend earlier commit (interactive rebasing)
 > git rebase -i <old commit_id>
-can be used to - 
+can be used to -
     - amend earlier commit (include/exclude files)
     - drop intermediate commits
     - rewording commit messages
     - reordering commits
     - squash multiple previous commit
     - split a commit
-
-

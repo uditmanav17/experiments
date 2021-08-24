@@ -12,3 +12,6 @@ exclude = '''
   |Jenkinfile
 )/
 '''
+
+[settings]
+known_third_party = ["pytest"]
