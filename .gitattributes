@@ -1,7 +1,7 @@
 # Git Attributes
 # *jpeg diff=exif
 
-# exclude some files from package in github
+# exclude some files from release package in github
 .*          export-ignore
 graveyard   export-ignore
 
