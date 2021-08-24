@@ -158,6 +158,9 @@ BRANCHING
 - delete a branch (force delete using -D)
 > git branch -d <branch_name>
 
+- delete a branch from remote after removing it in local
+> git push origin :<branch_name>
+
 - Comparing branch 
     - Commits that are in branch_name2 but not in branch_name1
     > git log <branch_name1>..<branch_name2>
