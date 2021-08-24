@@ -2,6 +2,8 @@
 
 import re
 
+API_KEY = "{SECRET_TOKEN}"
+
 
 def compare_strings(string1, string2):
     # Convert both strings to lowercase

@@ -1,0 +1,13 @@
+# Git Attributes
+# *jpeg diff=exif
+
+# exclude some files from package in github
+.*          export-ignore
+graveyard   export-ignore
+
+# filters
+def.py filter=updateSecretToken
+# setting smudge and clean filters
+# git config --global filter.updateSecretToken.smudge 'sed "s/{SECRET_TOKEN}/RANDOM-STRING-TO-TEST-FILTERS/"'
+# git config --global filter.updateSecretToken.clean 'sed "s/RANDOM-STRING-TO-TEST-FILTERS/{SECRET_TOKEN}/"'
+
