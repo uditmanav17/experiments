@@ -4,9 +4,9 @@
 # exit with non-zero if any of scripts fails
 set -e 
 
-# run tests
-pytest -q --tb=line
-
 # apply formatter
 black .
+
+# run tests
+pytest -q
 

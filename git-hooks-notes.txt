@@ -5,6 +5,10 @@ Client side GitHooks (pre-commit)
 - edit and save it there only
 - make note first line of pre-commit should be - #!/bin/sh
 
+Make hooks availble to teammates
+> make .githooks directory and move pre-commit there 
+- git config --local core.hooksPath .githooks
+
 
 
 
